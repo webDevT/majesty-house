@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Welcom screen</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	
+<div class="welcome">
+	<div class="loader">
+		<img src="img/logo.png" alt="" class="logo">
+	</div>
+	<!-- <img src="img/cropped-Majesty-House-logo-2.webp" alt="" class="logo"> -->
+	
+	<div class="welcome-text">
+	
+	Welcome to Majesty House, we are connecting you to the service 
+</div>
+
+		
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script>
+	var text = $(".welcome-text").text();
+var chars= text.split("");
+ $(".welcome-text").empty();
+chars.forEach(function (char){
+	if (char==" "){
+	    $(".welcome-text").append("<div class='split-char w40px'>" + char);	
+	}
+	else{
+		$(".welcome-text").append("<div class='split-char'>" + char);	
+	}
+ });
+var splitChar=$(".split-char");
+
+function random(min, max){
+	return (Math.random() * (max - min)) + min;
+}
+
+splitChar.each(function(i){
+	TweenMax.from($(this), 2.0, {
+		opacity: 0,
+		x: random(-500, 500),
+		y: random(-500, 500),
+		z: random(-500, 500),
+		scale: .1,
+		delay: i * .02,
+		yoyo: true,
+		repeat: 0
+		
+	});
+});
+  </script>
+	<script src="js/main.js"></script>
+</body>
+</html>
