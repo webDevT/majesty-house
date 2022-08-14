@@ -130,6 +130,144 @@
         width: 35px
 //end end screen style
 
+//start menu style
+.iframe__header
+    margin-top: 10px 
+    margin-left: 10px
+    display: flex 
+    align-items: center
+    position: relative
+    font-family: 'Montserrat', sans-serif
+.menu-wrapper 
+    background: $blue
+    color: #fff 
+    width: 50px 
+    height: 50px
+    display: flex 
+    justify-content: center 
+    align-items: center
+    flex-direction: column
+.menu__btn 
+    width: 30px 
+    height: 16px
+.menu__btn-row 
+    width: 30px 
+    height: 2px 
+    background: #fff
+    margin-bottom: 5px
+    border-radius: 10px
+    transition: all 0.3s
+.menu__btn-row:last-child 
+    margin-bottom: 0
+.menu__title
+    font-size: 10px
+    line-height: 1
+    padding-top: 3px
+    font-family: 'Montserrat', sans-serif
+    font-weight: 600
+
+.menu__btn
+    cursor: pointer
+.menu__content
+    background: $blue
+    display: flex 
+    align-items: center
+.reload-img 
+    width: 30px
+.menu__content
+    position: absolute 
+    top: 100% 
+    left: 0
+.menu__content
+    display: none
+.menu__content.active
+    display: flex
+.reload-btn,
+.full-screen__btn,
+.subtitle__btn
+    cursor: pointer
+
+.full-screen-img
+    width: 27px
+.subtitle__img
+    width: 34px 
+.menu__item
+    padding: 10px 0px
+    display: flex 
+    align-items: center 
+    width: 50px
+    justify-content: center
+    height: 100%
+.menu__item.active
+    background: #666666
+.leng 
+    background: #666666
+    color: #fff
+    width: 50px 
+    height: 50px
+    display: flex 
+    justify-content: center 
+    align-items: center
+    font-weight: 700
+    cursor: pointer
+    margin-left: 1px 
+    margin-bottom: 1px
+    font-size: 8px
+    position: relative
+.leng__wrapper
+    display: none
+.leng__wrapper.active
+    display: block
+.leng.active 
+    background: red
+.down-img 
+    width: 15px 
+.menu__btn.active 
+    .menu__btn-row:last-child 
+        display: none
+
+    .menu__btn-row:first-child 
+        transform: rotate(45deg)
+        margin: 0
+        position: relative
+        top: 5.5px
+    .menu__btn-row:nth-child(2) 
+        transform: rotate(-45deg)
+        position: relative
+        top: 4px
+.leng__wrapper
+    position: relative
+.leng__list
+    position: absolute 
+    top: 100% 
+    left: 0
+    z-index: 999
+    display: none
+.leng__list.active 
+    display: block
+.leng__item
+    width: 50px 
+    height: 50px 
+    display: flex 
+    justify-content: center 
+    align-items: center
+    background: #666666
+    color: #fff
+    font-size: 12px
+    font-weight: 600
+    cursor: pointer
+    border-bottom: 1px solid #fff
+.leng__item.active
+    background: #000
+.iframe__header--open
+    display: flex
+    align-items: flex-start
+    .menu__content 
+        position: static
+    .leng 
+        height: 55.5px
+//end menu style
+
 @import "media"
 
 
