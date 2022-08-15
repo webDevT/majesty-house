@@ -40,6 +40,7 @@
 
 
 <div class="menu__item">
+
 	<div class="full-screen__btn">
 		<img src="img/fullscreen-symbol.svg" alt="" class="full-screen-img">
 		
@@ -54,17 +55,15 @@
 </div>
 
 <div class="subtittle-wrapper">
-<div class="menu__item">
+<div class="menu__item menu__item--sub-title">
+	<div class="bage">22</div>
 	<div class="subtitle__btn">
 		<img src="img/closed-caption-subtitles-icon.svg" alt="" class="subtitle__img">
 	</div>
 </div>
 
 <div class="leng__wrapper">
-	<div class="leng">
-	LENG
-	<img src="img/down.svg" alt="" class="down-img">
-</div>
+	
 
 <div class="leng__list">
 	<div class="leng__item a">
@@ -131,23 +130,18 @@ $('.menu__btn').click(function(){
 	$('.leng__wrapper').removeClass('active');
 })
 
-$('.subtitle__btn').click(function(){
-	$('.leng__wrapper').toggleClass('active');
-	$(this).parent().toggleClass('active');
-	
-})
+
 
 $('.leng__item').click(function(){
 	$(this).toggleClass('active');
 })
 
-$('.leng').click(function(){
-	$('.leng__list').toggleClass('active');
-})
 
 $('.subtitle__btn').click(function(){
 	$('.menu__content').removeClass('active');
 	$('.menu__btn').removeClass('active');
+	$('.leng__wrapper').toggleClass('active');
+	$('.leng__list').toggleClass('active');
 })
 
 });
