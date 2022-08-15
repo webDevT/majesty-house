@@ -8,6 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
 	
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -47,6 +48,76 @@
 	</div>
 </div>
 
+<div class="menu__item">
+
+	<div class="interpretation__btn">
+		<img src="img/Ic_translate_48px.svg" alt="" class="full-screen-img">
+		
+	</div>
+</div>
+
+<div class="interpretation__modal">
+	<div class="language__row">
+		<div class="lenguage__title">
+				Language: 
+		</div>
+	
+		<select name="" id="" class="select">
+			<option value="">
+				PL
+			</option>
+			<option value="">
+				EN
+			</option>
+			<option value="">
+				UA
+			</option>
+			<option value="">
+				NL
+			</option>
+
+		</select>
+	</div>
+	<div class="buttons__row">
+		<div class="play__btn">
+			<img src="img/play-button-svgrepo-com.svg" alt="" class="play-img">
+			<img src="img/stop-button-round-icon.svg" alt="" class="stop-img">
+		</div>
+
+
+		<div class="video__btn">
+			<img src="img/camera_video_icon_176703.svg" alt="">
+		</div>
+
+		<div class="volume__btn">
+			<img src="img/medium-volume-svgrepo-com.svg" alt="">
+			
+			
+			   
+		
+		</div>
+
+
+		
+		<div>
+			  <div class="option">
+				  <input type="range" min="0" max="1" step="0.1" name="volume" id="volume" value="0.2">
+			  </div>
+			  
+		  
+			
+		  
+		  </div>
+		
+
+		
+	</div>
+
+
+
+
+	
+</div>
 
 
 
@@ -144,7 +215,110 @@ $('.subtitle__btn').click(function(){
 	$('.leng__list').toggleClass('active');
 })
 
+$('.play__btn').click(function(){
+	$(this).toggleClass('active');
+})
+
+
 });
+
+$('.interpretation__btn').click(function(){
+	$('.interpretation__modal').toggleClass('active');
+})
 	</script>
+
+
+<script>
+	/*
+ * Check for browser support
+ */
+var supportMsg = document.getElementById('msg');
+
+if ('speechSynthesis' in window) {
+	supportMsg.innerHTML = 'Your browser <strong>supports</strong> speech synthesis.';
+} else {
+	supportMsg.innerHTML = 'Sorry your browser <strong>does not support</strong> speech synthesis.<br>Try this in <a href="https://www.google.co.uk/intl/en/chrome/browser/canary.html">Chrome Canary</a>.';
+	supportMsg.classList.add('not-supported');
+}
+
+
+// Get the 'speak' button
+var button = document.getElementById('speak');
+
+// Get the text input element.
+var speechMsgInput = document.getElementById('speech-msg');
+
+// Get the voice select element.
+var voiceSelect = document.getElementById('voice');
+
+// Get the attribute controls.
+var volumeInput = document.getElementById('volume');
+var rateInput = document.getElementById('rate');
+var pitchInput = document.getElementById('pitch');
+
+
+// Fetch the list of voices and populate the voice options.
+function loadVoices() {
+  // Fetch the available voices.
+	var voices = speechSynthesis.getVoices();
+  
+  // Loop through each of the voices.
+	voices.forEach(function(voice, i) {
+    // Create a new option element.
+		var option = document.createElement('option');
+    
+    // Set the options value and text.
+		option.value = voice.name;
+		option.innerHTML = voice.name;
+		  
+    // Add the option to the voice selector.
+		voiceSelect.appendChild(option);
+	});
+}
+
+// Execute loadVoices.
+loadVoices();
+
+// Chrome loads voices asynchronously.
+window.speechSynthesis.onvoiceschanged = function(e) {
+  loadVoices();
+};
+
+
+// Create a new utterance for the specified text and add it to
+// the queue.
+function speak(text) {
+  // Create a new instance of SpeechSynthesisUtterance.
+	var msg = new SpeechSynthesisUtterance();
+  
+  // Set the text.
+	msg.text = text;
+  
+  // Set the attributes.
+	msg.volume = parseFloat(volumeInput.value);
+	msg.rate = parseFloat(rateInput.value);
+	msg.pitch = parseFloat(pitchInput.value);
+  
+  // If a voice has been selected, find the voice and set the
+  // utterance instance's voice attribute.
+	if (voiceSelect.value) {
+		msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == voiceSelect.value; })[0];
+	}
+  
+  // Queue this utterance.
+	window.speechSynthesis.speak(msg);
+}
+
+
+// Set up an event listener for when the 'speak' button is clicked.
+button.addEventListener('click', function(e) {
+	if (speechMsgInput.value.length > 0) {
+		speak(speechMsgInput.value);
+	}
+});
+
+</script>
+
+ 
 </body>
 </html>
