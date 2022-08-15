@@ -192,12 +192,13 @@
 .subtitle__img
     width: 34px 
 .menu__item
-    padding: 10px 0px
+    padding: 0px 0px
     display: flex 
     align-items: center 
     width: 50px
+    height: 50px
     justify-content: center
-    height: 100%
+    background: $blue
 .menu__item.active
     background: #666666
 .leng 
@@ -210,10 +211,10 @@
     align-items: center
     font-weight: 700
     cursor: pointer
-    margin-left: 1px 
-    margin-bottom: 1px
     font-size: 8px
     position: relative
+    border-top: 1px solid #fff
+    border-bottom: 1px solid #fff
 .leng__wrapper
     display: none
 .leng__wrapper.active
@@ -243,10 +244,22 @@
     left: 0
     z-index: 999
     display: none
+    height: 204px 
+    overflow-y: auto
+    overflow-x: hidden
+
+
+.leng__list::-webkit-scrollbar
+    width: 3px
+    background-color: #666666
+    border-radius: 5px
+.leng__list::-webkit-scrollbar-thumb
+    background: #3b8dbd
+    border-radius: 5px
 .leng__list.active 
     display: block
 .leng__item
-    width: 50px 
+    width: 48.5px 
     height: 50px 
     display: flex 
     justify-content: center 
@@ -257,8 +270,12 @@
     font-weight: 600
     cursor: pointer
     border-bottom: 1px solid #fff
+    
+
 .leng__item.active
-    background: #000
+    background: $blue
+    color: #fff
+   
 .iframe__header--open
     display: flex
     align-items: flex-start
@@ -268,6 +285,13 @@
         height: 55.5px
 //end menu style
 
+.subtittle-wrapper 
+    position: relative
+    border: 1px solid #fff
+.leng__wrapper
+    position: absolute 
+    top: 100% 
+    left: 0
 @import "media"
 
 

@@ -13,62 +13,107 @@
 </head>
 <body>
 
-	<div class="iframe__header iframe__header--open">
+
+<!-- start menu -->
+
+<div class="iframe__header">
+	<div class="menu">
+<div class="menu-wrapper">
+<div class="menu__btn">
+	<div class="menu__btn-row"></div>
+	<div class="menu__btn-row"></div>
+	<div class="menu__btn-row"></div>
+</div>
+<div class="menu__title">
+	menu
+</div>
+</div>
+
+<div class="menu__content">
+<div class="menu__item">
+	<div class="reload-btn">
+		<img src="img/reload-svgrepo-com.svg" alt="" class="reload-img">
 		
-		
-
-	<div class="menu__content active">
-		<div class="menu__item">
-			<div class="reload-btn">
-				<img src="img/reload-svgrepo-com.svg" alt="" class="reload-img">
-				
-			</div>
-		</div>
-
-		
-
-		<div class="menu__item">
-			<div class="full-screen__btn">
-				<img src="img/fullscreen-symbol.svg" alt="" class="full-screen-img">
-				
-			</div>
-		</div>
-
-		<div class="menu__item">
-			<div class="subtitle__btn">
-				<img src="img/closed-caption-subtitles-icon.svg" alt="" class="subtitle__img">
-			</div>
-		</div>
-		
-		
-	</div>
-
-	
-<div class="leng__wrapper">
-		<div class="leng">
-		LENG
-		<img src="img/down.svg" alt="" class="down-img">
-	</div>
-
-	<div class="leng__list">
-		<div class="leng__item a">
-			EN
-		</div>
-		<div class="leng__item">
-			UA
-		</div>
-		<div class="leng__item">
-			PL
-		</div>
-		<div class="leng__item">
-			ND
-		</div>
 	</div>
 </div>
 
 
 
+<div class="menu__item">
+	<div class="full-screen__btn">
+		<img src="img/fullscreen-symbol.svg" alt="" class="full-screen-img">
+		
 	</div>
+</div>
+
+
+
+
+</div>
+
+</div>
+
+<div class="subtittle-wrapper">
+<div class="menu__item">
+	<div class="subtitle__btn">
+		<img src="img/closed-caption-subtitles-icon.svg" alt="" class="subtitle__img">
+	</div>
+</div>
+
+<div class="leng__wrapper">
+	<div class="leng">
+	LENG
+	<img src="img/down.svg" alt="" class="down-img">
+</div>
+
+<div class="leng__list">
+	<div class="leng__item a">
+		EN
+	</div>
+	<div class="leng__item">
+		UA
+	</div>
+	<div class="leng__item">
+		PL
+	</div>
+	<div class="leng__item">
+		ND
+	</div>
+	<div class="leng__item a">
+		EN
+	</div>
+	<div class="leng__item">
+		UA
+	</div>
+	<div class="leng__item">
+		PL
+	</div>
+	<div class="leng__item">
+		ND
+	</div>
+	<div class="leng__item a">
+		EN
+	</div>
+	<div class="leng__item">
+		UA
+	</div>
+	<div class="leng__item">
+		PL
+	</div>
+	<div class="leng__item">
+		ND
+	</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+<!-- end menu -->
+
 
 
 
@@ -83,6 +128,7 @@
 $('.menu__btn').click(function(){
 	$(this).toggleClass('active');
 	$('.menu__content').toggleClass('active');
+	$('.leng__wrapper').removeClass('active');
 })
 
 $('.subtitle__btn').click(function(){
@@ -99,8 +145,14 @@ $('.leng').click(function(){
 	$('.leng__list').toggleClass('active');
 })
 
+$('.subtitle__btn').click(function(){
+	$('.menu__content').removeClass('active');
+	$('.menu__btn').removeClass('active');
+})
 
 });
+
+
 	</script>
 </body>
 </html>
