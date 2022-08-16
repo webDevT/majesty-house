@@ -16,7 +16,6 @@
 
 
 <!-- start menu -->
-
 <div class="iframe__header">
 	<div class="menu">
 <div class="menu-wrapper">
@@ -29,38 +28,32 @@
 	menu
 </div>
 </div>
-
 <div class="menu__content">
+
+	<div class="menu__item">
+		<div class="volume__btn">
+			<img src="img/medium-volume-svgrepo-com.svg" alt="">		
+		</div>	
+	</div>
+
+	<div class="menu__item">
+	<div class="full-screen__btn">
+		<img src="img/fullscreen-symbol.svg" alt="" class="full-screen-img">		
+	</div>
+</div>
+
 <div class="menu__item">
 	<div class="reload-btn">
-		<img src="img/reload-svgrepo-com.svg" alt="" class="reload-img">
-		
+		<img src="img/reload-svgrepo-com.svg" alt="" class="reload-img">		
 	</div>
 </div>
 
 
 
-<div class="menu__item">
 
-	<div class="full-screen__btn">
-		<img src="img/fullscreen-symbol.svg" alt="" class="full-screen-img">
-		
-	</div>
-</div>
 
-<div class="menu__item">
-
-	<div class="volume__btn">
-		<img src="img/medium-volume-svgrepo-com.svg" alt="">
-		
-	</div>
-
-	
-</div>
-
-<!-- start interpritation modal -->
-<div class="volume__modal">
-	
+<!-- start volume modal -->
+<div class="volume__modal">	
 	<div class="buttons__row">
 		<div>
 			  <div class="option">
@@ -70,12 +63,8 @@
 	</div>	
 </div>
 <!-- end volume modal -->
-
-
 </div>
-
 </div>
-
 <div class="subtittle-wrapper">
 <div class="menu__item menu__item--sub-title">
 	<div class="bage">22</div>
@@ -83,9 +72,7 @@
 		<img src="img/closed-caption-subtitles-icon.svg" alt="" class="subtitle__img">
 	</div>
 </div>
-
-<div class="leng__wrapper">
-	
+<div class="leng__wrapper">	
 
 <div class="leng__list">
 	<div class="leng__item a">
@@ -183,13 +170,7 @@
 
 
 </div>
-
-
-
 <!-- end menu -->
-
-
-
 
 	<script
 	src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -235,21 +216,16 @@ $('.leng__item--i').click(function(){
 	$(this).toggleClass('active');
 })
 
-
-
 $('.play__btn').click(function(){
 	$(this).toggleClass('active');
 })
 
-
 });
-
 
 $('.volume__btn').click(function(){
 	$('.volume__modal').toggleClass('active');
 })
-	</script>
-
+</script>
 
 <script>
 	/*
@@ -342,6 +318,5 @@ button.addEventListener('click', function(e) {
 
 </script>
 
- 
 </body>
 </html>
