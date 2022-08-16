@@ -48,8 +48,28 @@
 	</div>
 </div>
 
+<div class="menu__item">
 
+	<div class="volume__btn">
+		<img src="img/medium-volume-svgrepo-com.svg" alt="">
+		
+	</div>
 
+	
+</div>
+
+<!-- start interpritation modal -->
+<div class="volume__modal">
+	
+	<div class="buttons__row">
+		<div>
+			  <div class="option">
+				  <input type="range" min="0" max="1" step="0.1" name="volume" id="volume" value="0.2">
+			  </div>		  
+		  </div>		
+	</div>	
+</div>
+<!-- end volume modal -->
 
 
 </div>
@@ -109,59 +129,57 @@
 </div>
 
 
-<div class="interpritation__wrapper">
-	<div class="menu__item">
-
-		<div class="interpretation__btn">
-			<img src="img/language-icon.svg" alt="" class="full-screen-img">
-			
+<div class="interpritation-wrapper">
+	<div class="menu__item menu__item--sub-title">
+		<div class="bage">3</div>
+		<div class="inter__btn">
+			<img src="img/language-icon.svg" alt="" class="subtitle__img">
 		</div>
 	</div>
-
-<!-- start interpritation modal -->
-<div class="interpretation__modal">
-	<div class="language__row">
-		<div class="lenguage__title">
-				Language: 
-		</div>
 	
-		<select name="" id="" class="select">
-			<option value="">
-				PL
-			</option>
-			<option value="">
-				EN
-			</option>
-			<option value="">
-				UA
-			</option>
-			<option value="">
-				NL
-			</option>
-
-		</select>
+	<div class="inter__wrapper">
+		
+	
+	<div class="inter__list">
+		<div class="leng__item--i">
+			EN
+		</div>
+		<div class="leng__item--i">
+			UA
+		</div>
+		<div class="leng__item--i">
+			PL
+		</div>
+		<div class="leng__item--i">
+			ND
+		</div>
+		<div class="leng__item--i">
+			EN
+		</div>
+		<div class="leng__item--i">
+			UA
+		</div>
+		<div class="leng__item--i">
+			PL
+		</div>
+		<div class="leng__item--i">
+			ND
+		</div>
+		<div class="leng__item--i">
+			EN
+		</div>
+		<div class="leng__item--i">
+			UA
+		</div>
+		<div class="leng__item--i">
+			PL
+		</div>
+		<div class="leng__item--i">
+			ND
+		</div>
 	</div>
-	<div class="buttons__row">
-		<div class="play__btn">
-			<img src="img/play-button-svgrepo-com.svg" alt="" class="play-img">
-			<img src="img/stop-button-round-icon.svg" alt="" class="stop-img">
-		</div>
-		<div class="video__btn">
-			<img src="img/camera_video_icon_176703.svg" alt="">
-		</div>
-		<div class="volume__btn">
-			<img src="img/medium-volume-svgrepo-com.svg" alt="">
-		</div>		
-		<div>
-			  <div class="option">
-				  <input type="range" min="0" max="1" step="0.1" name="volume" id="volume" value="0.2">
-			  </div>		  
-		  </div>		
-	</div>	
-</div>
-<!-- end interpritation modal -->
-
-</div>
+	</div>
+	</div>
 
 
 </div>
@@ -185,21 +203,39 @@ $('.menu__btn').click(function(){
 	$(this).toggleClass('active');
 	$('.menu__content').toggleClass('active');
 	$('.leng__wrapper').removeClass('active');
+	$('.leng__list').toggleClass('active');
+	$('.inter__wrapper').removeClass('active');
+	$('.inter__list').removeClass('active');
 })
-
-
-
-$('.leng__item').click(function(){
-	$(this).toggleClass('active');
-})
-
 
 $('.subtitle__btn').click(function(){
 	$('.menu__content').removeClass('active');
 	$('.menu__btn').removeClass('active');
 	$('.leng__wrapper').toggleClass('active');
 	$('.leng__list').toggleClass('active');
+	$('.inter__wrapper').removeClass('active');
+	$('.inter__list').removeClass('active');
 })
+
+$('.inter__btn').click(function(){
+	$('.menu__content').removeClass('active');
+	$('.menu__btn').removeClass('active');
+	$('.leng__wrapper').removeClass('active');
+	$('.leng__list').removeClass('active');
+	$('.inter__wrapper').toggleClass('active');
+	$('.inter__list').toggleClass('active');
+})
+
+$('.leng__item').click(function(){
+	$(this).toggleClass('active');
+})
+
+$('.leng__item--i').click(function(){
+	$('.leng__item--i').removeClass('active');
+	$(this).toggleClass('active');
+})
+
+
 
 $('.play__btn').click(function(){
 	$(this).toggleClass('active');
@@ -208,8 +244,9 @@ $('.play__btn').click(function(){
 
 });
 
-$('.interpretation__btn').click(function(){
-	$('.interpretation__modal').toggleClass('active');
+
+$('.volume__btn').click(function(){
+	$('.volume__modal').toggleClass('active');
 })
 	</script>
 

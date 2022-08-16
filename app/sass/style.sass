@@ -170,7 +170,8 @@
     cursor: pointer
 .menu__content
     background: $blue
-    display: flex 
+    display: flex
+    width: 152px
     align-items: center
 .reload-img 
     width: 30px
@@ -215,9 +216,11 @@
     position: relative
     border-top: 1px solid #fff
     border-bottom: 1px solid #fff
-.leng__wrapper
+.leng__wrapper,
+.inter__wrapper
     display: none
-.leng__wrapper.active
+.leng__wrapper.active,
+.inter__wrapper.active
     display: block
 .leng.active 
     background: red
@@ -236,9 +239,11 @@
         transform: rotate(-45deg)
         position: relative
         top: 4px
-.leng__wrapper
+.leng__wrapper,
+.inter__wrapper
     position: relative
-.leng__list
+.leng__list,
+.inter__list
     position: absolute 
     top: 100% 
     left: 0
@@ -250,16 +255,20 @@
     border-top: 1px solid #fff
 
 
-.leng__list::-webkit-scrollbar
+.leng__list::-webkit-scrollbar,
+.inter__list::-webkit-scrollbar
     width: 3px
     background-color: #666666
     border-radius: 5px
-.leng__list::-webkit-scrollbar-thumb
+.leng__list::-webkit-scrollbar-thumb,
+.inter__list::-webkit-scrollbar-thumb
     background: #3b8dbd
     border-radius: 5px
-.leng__list.active 
+.leng__list.active,
+.inter__list.active 
     display: block
-.leng__item
+.leng__item,
+.leng__item--i
     width: 48.5px 
     height: 50px 
     display: flex 
@@ -273,7 +282,8 @@
     border-bottom: 1px solid #fff
     
 
-.leng__item.active
+.leng__item.active,
+.leng__item--i.active
     background: $blue
     color: #fff
    
@@ -286,10 +296,12 @@
         height: 55.5px
 //end menu style
 
-.subtittle-wrapper 
+.subtittle-wrapper,
+.interpritation-wrapper
     position: relative
     border: 1px solid #fff
-.leng__wrapper
+.leng__wrapper,
+.inter__wrapper
     position: absolute 
     top: 100% 
     left: 0
@@ -310,6 +322,7 @@
     font-size: 8px
     font-weight: 600
     color: #fff
+    z-index: 99
 .interpretation__btn img
     width: 32px
     cursor: pointer
@@ -319,7 +332,6 @@
     top: 100% 
     left: 0
     color: #fff
-    width: 260px
     border-top: 2px solid #fff
     padding: 10px 10px
 .select 
@@ -336,7 +348,6 @@
     padding: 5px 0
     display: flex 
     align-items: center
-    margin-top: 5px
 .play__btn,
 .stop__btn,
 .video__btn
@@ -373,13 +384,27 @@ input[type="text"]
     border: 1px solid #D9D9D9
     box-shadow: 0 2px 3px rgba(0,0,0,0.1) inset
 input[type="range"]
-    width: 150px
+    width: 140px
 .interpretation__modal
     display: none
 .interpretation__modal.active 
     display: block
-
-
+.volume__modal
+    position: absolute 
+    left: 0 
+    top: 100%
+    background: $blue
+    margin-top: 2px
+    height: 50px
+    display: flex 
+    justify-content: center 
+    align-items: center
+    width: 152px
+    display: none
+.volume__modal.active 
+    display: flex
+.inter__btn 
+    cursor: pointer
 
 
 
