@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Welcom screen</title>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 	
 	<link rel="stylesheet" href="css/style.min.css">
@@ -48,9 +51,27 @@
 	</div>
 </div>
 
+<div class="menu__item">
+	<div class="playlist-btn">
+		<img src="img/video-playlist-icon.svg" alt="" class="reload-img">		
+	</div>
+</div>
 
-
-
+<!-- start play-list modal -->
+<div class="play-list__modal">
+	<div class="slider">
+		<div class="slider__item">
+			1
+		</div>
+		<div class="slider__item">
+			2
+		</div>
+		<div class="slider__item">
+			3
+		</div>
+	</div>
+</div>
+<!-- end play-list modal -->
 
 <!-- start volume modal -->
 <div class="volume__modal">	
@@ -318,5 +339,6 @@ button.addEventListener('click', function(e) {
 
 </script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

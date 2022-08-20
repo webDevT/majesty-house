@@ -86,8 +86,6 @@
 
 //start end screen style
 .end-screen
-    padding-left: 10% 
-    padding-right: 10%
     font-family: 'Montserrat', sans-serif
     font-weight: 400
     width: 100% 
@@ -138,6 +136,8 @@
     align-items: center
     position: relative
     font-family: 'Montserrat', sans-serif
+    position: absolute
+    z-index: 999
 .menu-wrapper 
     background: $blue
     color: #fff 
@@ -171,7 +171,7 @@
 .menu__content
     background: $blue
     display: flex
-    width: 152px
+    width: 200px
     align-items: center
 .reload-img 
     width: 30px
@@ -299,7 +299,7 @@
 .subtittle-wrapper,
 .interpritation-wrapper
     position: relative
-    border: 1px solid #fff
+    border-left: 1px solid #fff
 .leng__wrapper,
 .inter__wrapper
     position: absolute 
@@ -405,8 +405,20 @@ input[type="range"]
     display: flex
 .inter__btn 
     cursor: pointer
+.playlist-btn
+    cursor: pointer
 
-
+//start play list modal 
+.play-list__modal
+    position: absolute 
+    left: 0 
+    top: 100%
+    background: $blue
+    margin-top: 2px
+    color: #fff 
+    padding: 10px
+    width: 300px
+//end play list modal
 
 
 @import "media"
