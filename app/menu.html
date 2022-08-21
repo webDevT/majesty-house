@@ -59,16 +59,43 @@
 
 <!-- start play-list modal -->
 <div class="play-list__modal">
+	
 	<div class="slider">
 		<div class="slider__item">
-			1
+			<img src="img/video-img.png" alt="" class="video-img">
+			<div class="play-list-title">
+				Some title Lorem ipsum dolor sit amet.
+			</div>
 		</div>
 		<div class="slider__item">
-			2
+			<img src="img/video-img.png" alt="" class="video-img">
+			<div class="play-list-title">
+				Some title Lorem ipsum dolor sit amet.
+			</div>
 		</div>
 		<div class="slider__item">
-			3
+			<img src="img/video-img.png" alt="" class="video-img">
+			<div class="play-list-title">
+				Some title Lorem ipsum dolor sit amet.
+			</div>
 		</div>
+		
+		<div class="slider__item">
+			<img src="img/video-img.png" alt="" class="video-img">
+			<div class="play-list-title">
+				Some title Lorem ipsum dolor sit amet.
+			</div>
+		</div>
+	</div>
+
+	<div class="nav-button">
+		<div class="prev">
+			<img src="img/previous-icon.svg" alt="">
+		</div>
+		<div class="next">
+			<img src="img/next-icon.svg" alt="">
+		</div>
+		
 	</div>
 </div>
 <!-- end play-list modal -->
@@ -197,8 +224,13 @@
 	src="https://code.jquery.com/jquery-3.6.0.min.js"
 	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>
+
+
+
+
 		$(function(){
 
 $('.menu__btn').click(function(){
@@ -209,6 +241,7 @@ $('.menu__btn').click(function(){
 	$('.inter__wrapper').removeClass('active');
 	$('.inter__list').removeClass('active');
 })
+
 
 $('.subtitle__btn').click(function(){
 	$('.menu__content').removeClass('active');
@@ -239,12 +272,18 @@ $('.leng__item--i').click(function(){
 
 $('.play__btn').click(function(){
 	$(this).toggleClass('active');
+	
 })
 
 });
 
 $('.volume__btn').click(function(){
 	$('.volume__modal').toggleClass('active');
+})
+
+$('.playlist-btn').click(function(){
+	$('.play-list__modal').toggleClass('active');
+	$('.slider').slick('reinit'); 
 })
 </script>
 
@@ -339,6 +378,6 @@ button.addEventListener('click', function(e) {
 
 </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
 </html>
