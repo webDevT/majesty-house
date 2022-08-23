@@ -419,6 +419,7 @@ input[type="range"]
     padding: 0px 0
     width: 300px
     padding-top: 20px
+    padding-bottom: 20px
     display: none
 .play-list__modal.active 
     display: block
@@ -432,6 +433,7 @@ input[type="range"]
 .play-list-title
     font-size: 14px
     text-align: center
+    padding-top: 20px
 .nav-button 
     padding: 10px 20px
     display: flex 
@@ -444,6 +446,15 @@ input[type="range"]
     margin: 0px 15px
     img 
         width: 30px
+.slick-next,
+.slick-prev
+    top: 95px
+    transform: translateY(-100%)
+    z-index: 999
+.slick-prev
+    left: -10px
+.slick-next 
+    right: -10px
 @import "media"
 
 
