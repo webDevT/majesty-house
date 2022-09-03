@@ -5,3 +5,7 @@ $('.slider').slick({
     nextArrow: $('.next'),
 
   });
+
+  $('.leng__item--i').click(function(){
+    $('.preloader').fadeIn();
+  })

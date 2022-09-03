@@ -455,6 +455,77 @@ input[type="range"]
     left: -10px
 .slick-next 
     right: -10px
+
+//start interpritation style
+.preloader
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .1)
+    z-index: 99
+    display: none
+.loader-interpritation
+    display: block
+    position: relative
+    left: 50%
+    top: 50%
+    width: 120px
+    height: 120px
+    margin: -75px 0 0 -75px
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top-color: #54a9f4
+    animation: spin 3s linear infinite
+.loader-interpritation:before
+    content: ""
+    position: absolute
+    top: 5px
+    left: 5px
+    right: 5px
+    bottom: 5px
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top-color: #0486fa
+    animation: spin 3s linear infinite
+.loader-interpritation:after
+    content: ""
+    position: absolute
+    top: 15px
+    left: 15px
+    right: 15px
+    bottom: 15px
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top-color: $blue
+    animation: spin 1.5s linear infinite
+@-webkit-keyframes spin
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+@keyframes spin
+    0%
+        transform: rotate(0deg)
+    100%
+       transform: rotate(360deg)
+//end interpritation style
+
+.interpritation-anim-icon
+    width: 50px
+    height: auto
+    position: absolute 
+    right: 20px
+    bottom: 20px
+.interpritation-anim-icon
+    animation: sc 1.5s linear infinite
+@keyframes sc
+    0%
+        transform: scale(0.8)
+    100%
+       transform: scale(1)
+
 @import "media"
 
 
