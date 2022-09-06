@@ -513,18 +513,32 @@ input[type="range"]
 //end interpritation style
 
 .interpritation-anim-icon
-    width: 50px
+    width: 40px
     height: auto
     position: absolute 
     right: 20px
     bottom: 20px
 .interpritation-anim-icon
     animation: sc 1.5s linear infinite
+
 @keyframes sc
     0%
         transform: scale(0.8)
     100%
        transform: scale(1)
+.pause-btn 
+    position: absolute
+    bottom: 20px
+    right: 80px
+    width: 40px
+    height: 40px
+    box-shadow: 0px 0px 8px #0486fa
+    display: flex 
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    cursor: pointer
+
 
 @import "media"
 
